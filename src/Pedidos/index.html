@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Don Rosel - Gestión de Pedidos</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div class="container">
+		<header>
+			<h1>Don Rosel</h1>
+			<p>Registro y consulta de pedidos</p>
+		</header>
+
+		<main class="main-content">
+			<section class="form-section">
+				<h2>Registrar pedido</h2>
+				<form id="order-form">
+					<div class="form-grid">
+						<div class="form-group">
+							<label for="customer">Cliente</label>
+							<input type="text" id="customer" required placeholder="Nombre del cliente">
+						</div>
+						<div class="form-group">
+							<label for="product">Producto</label>
+							<input type="text" id="product" required placeholder="Ej. Café molido 500g">
+						</div>
+						<div class="form-group">
+							<label for="quantity">Cantidad</label>
+							<input type="number" id="quantity" min="1" required placeholder="1">
+						</div>
+						<div class="form-group">
+							<label for="date">Fecha</label>
+							<input type="date" id="date" required>
+						</div>
+					</div>
+					<button type="submit" class="btn-submit">Guardar pedido</button>
+				</form>
+			</section>
+
+			<section class="table-section">
+				<div class="section-heading">
+					<h2>Consultar pedidos</h2>
+					<label class="search-label" for="search">Buscar</label>
+					<input type="search" id="search" placeholder="Número o cliente">
+				</div>
+				<p id="empty-message" class="empty-message">No hay pedidos registrados.</p>
+				<div class="table-container">
+					<table>
+						<thead>
+							<tr>
+								<th>N.º</th>
+								<th>Cliente</th>
+								<th>Producto</th>
+								<th>Cantidad</th>
+								<th>Fecha</th>
+								<th>Estado</th>
+								<th>Acción</th>
+							</tr>
+						</thead>
+						<tbody id="order-list"></tbody>
+					</table>
+				</div>
+			</section>
+		</main>
+	</div>
+
+	<script src="app.js"></script>
+</body>
+</html>
