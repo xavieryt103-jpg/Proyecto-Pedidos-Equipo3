@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Don Rosel - Catálogo de Café y Cacao</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Don Rosel</h1>
+            <p>Gestión de Catálogo - Café y Cacao</p>
+        </header>
+
+        <div class="main-content">
+            <!-- Formulario de Registro -->
+            <section class="form-section">
+                <h2>Registrar Producto</h2>
+                <form id="product-form">
+                    <div class="form-group">
+                        <label for="name">Nombre del Producto:</label>
+                        <input type="text" id="name" required placeholder="Ej. Café Grano Selecto">
+                    </div>
+                    <div class="form-group">
+                        <label for="category">Categoría:</label>
+                        <select id="category" required>
+                            <option value="">Seleccione...</option>
+                            <option value="Café">Café</option>
+                            <option value="Cacao">Cacao</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="price">Precio (S/.):</label>
+                        <input type="number" id="price" step="0.01" required placeholder="0.00">
+                    </div>
+                    <div class="form-group">
+                        <label for="stock">Stock:</label>
+                        <input type="number" id="stock" required placeholder="0">
+                    </div>
+                    <button type="submit" class="btn-submit">Guardar Producto</button>
+                </form>
+            </section>
+
+            <!-- Tabla de Listado -->
+            <section class="table-section">
+                <h2>Listado de Productos</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Categoría</th>
+                            <th>Precio (S/.)</th>
+                            <th>Stock</th>
+                        </tr>
+                    </thead>
+                    <tbody id="product-list">
+                        <!-- Los productos se insertarán dinámicamente aquí -->
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
